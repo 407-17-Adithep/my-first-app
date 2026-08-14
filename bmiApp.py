@@ -8,6 +8,8 @@ st.write("กรอกข้อมูลน้ำหนักและส่ว�
 weight = st.number_input("กรอกค่าน้ำหนักของคุณ (กิโลกรัม):", min_value=0.0, step=0.1)
 height_cm = st.number_input("กรอกค่าส่วนสูงของคุณ (เซนติเมตร):", min_value=0.0, step=0.1)
 
+value = 1.0
+
 # ขั้นตอนที่ 3 : สร้างปุ่มกดคำนวณ
 if st.button("คำนวณค่า BMI 🧮"):
     if height_cm > 0 and weight > 0:
