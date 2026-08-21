@@ -57,16 +57,16 @@ def show_result_dialog(ans1, ans2):
         st.success("✅ ข้อ 3: ถูกต้อง")
         score += 1
     else:
-        st.error(f"❌ ข้อ 3: ยังไม่ถูกต้อง (คุณตอบ '{u_ans1}')")
+        st.error(f"❌ ข้อ 3: ยังไม่ถูกต้อง (คุณตอบ '{u_ans3}')")
 
     # ตรวจข้อ 4
     if u_ans4 == "coconut":
         st.success("✅ ข้อ 4: ถูกต้อง")
         score += 1
     else:
-        st.error(f"❌ ข้อ 4: ยังไม่ถูกต้อง (คุณตอบ '{u_ans2}')")
+        st.error(f"❌ ข้อ 4: ยังไม่ถูกต้อง (คุณตอบ '{u_ans4}')")
 
-    if score == 2:
+    if score == 4:
         st.success("🎉 You win!")
     else:
         st.error("💀 You lose!")
@@ -99,7 +99,7 @@ ans2 = st.text_input(
     value=st.session_state.ans2_val,
 )
 ans3 = st.text_input(
-    "ข้อ 3: Slip on a `b a _ a n _` peel. 🍌",
+    "ข้อ 3: Slip on a `b a _ a n _`. 🍌",
     value=st.session_state.ans3_val,
 )
 ans4 = st.text_input(
@@ -115,7 +115,7 @@ st.session_state.ans4_val = ans4
 
 # ✏️ [พื้นที่สำหรับนักเรียน]: เพิ่มข้อ 3, 4 ตรงนี้
 ans3 = st.text_input(
-    "ข้อ 3: Slip on a `b a _ a n _` peel. 🍌",
+    "ข้อ 3: Slip on a `b a _ a n _` . 🍌",
     value=st.session_state.ans3_val,
 )
 ans4 = st.text_input(
